@@ -23,13 +23,14 @@ def mergecopy(l1,l2):
     c=[]
     i=0
     j=0
-    while i < len(l1):
+    while j < len(l2):
         if l1[i] < l2[j]:
             c.append(l1[i])
             i+=1
         else:
             c.append(l2[j])
             j+=1
+    c.append(l1[i])
     return c,j
 
 
@@ -37,5 +38,3 @@ def copy(l1, n, c):
     for k in range(n,len(l1)):
         c.append(l1[k])
     return c
-
-
